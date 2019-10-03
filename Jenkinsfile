@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Run Terraform'){
             steps {
-                sh "terraform plan"
+                sh "terraform init"
+		sh "terraform plan"
             }
         }        
     }
