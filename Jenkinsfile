@@ -4,9 +4,8 @@ pipeline {
     stages {
         stage('Run Terraform'){
             steps {
-                sh "whoami"
-		sh "/usr/local/bin/terraform init"
-		sh "/usr/local/bin/terraform plan"
+                sh "whoami
+		sh "echo $ACCESS_KEY_ID
             }
         }        
     }
