@@ -5,7 +5,7 @@ pipeline {
         stage('Run Terraform'){
             steps {
                 sh "whoami"
-		sh "echo $ACCESS_KEY_ID"
+		sh "echo \$ACCESS_KEY_ID"
             }
         }        
     }
