@@ -1,2 +1,2 @@
 # terraformPipeline
-This repo contains terraform files for provisioning AWS instances
+This repo contains Jenkins and terraform configuration files for provisioning AWS instances
