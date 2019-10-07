@@ -1,7 +1,7 @@
 provider "aws" {
-  access_key = "$AWS_ACCESS_KEY_ID"
-  secret_key = "$AWS_SECRET_ACCESS_KEY"
   region = "${var.region}"
+  shared_credentials_file = "/home/mub/.aws/credentials"
+  profile = "default"
 }
 
 resource "aws_instance" "linux"{
