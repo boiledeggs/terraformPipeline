@@ -23,3 +23,11 @@ resource "aws_instance" "windows" {
     Name = "TF_Windows - ${count.index + 1}"
   }
 }
+
+terraform {
+  backend "s3" {
+    bucket = "terraforms3statefile"
+    key    = "statefiles/dev/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
