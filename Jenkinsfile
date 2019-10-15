@@ -4,7 +4,7 @@ pipeline {
         stage('Run Terraform'){
             steps {
                 sh "whoami"
-                sh "terraform init"
+                sh "sudo terraform init"
                 sh "sudo terraform apply -auto-approve"
             }
         }        
