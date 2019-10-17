@@ -4,6 +4,14 @@ provider "aws" {
   profile = "default"
 }
 
+terraform {
+  backend "s3" {
+    bucket = "terraforms3statefile"
+    key    = "statefiles/dev/terraform.tfstate"
+    region = "us-east-1"
+  }
+}
+
 resource "aws_instance" "linux"{
   count = 2
   ami = "${lookup(var.ec2LinuxAmi, var.region)}"
